@@ -126,6 +126,10 @@ namespace ExpressAndroidTests2
 #line 20
   testRunner.When("I tap \"Show PDF\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
+  testRunner.Then("Popup appears \"Do you want to open in external viewer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 23
+  testRunner.When("I tap \"Cancel\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
   testRunner.Then("I can see \"PDFView\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

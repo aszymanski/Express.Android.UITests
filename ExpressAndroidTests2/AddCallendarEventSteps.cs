@@ -13,7 +13,7 @@ namespace ExpressAndroidTests2
         [BeforeScenario]
         public void SetUp()
         {
-            app = ConfigureApp.Android.ApkFile("D:/express.droid (2).apk").StartApp();
+            app = ConfigureApp.Android.ApkFile("D:/express.droid(2).apk").StartApp();
         }
 
         [Given(@"Launch Repl")]
@@ -42,12 +42,18 @@ namespace ExpressAndroidTests2
             app.WaitForElement(c => c.Marked(buttonName));
         }
 
+        [Then(@"Popup appears ""(.*)""")]
+        public void ThenPopupAppear(string msg)
+        {
+            app.WaitForElement(c => c.Class("TextView").Text(msg));
+
+        }
+
         [Then(@"I can see ""(.*)"" screen")]
         public void ThenICanSeeScreen(string screenName)
         {
-            app.WaitForElement(c => c.Marked("action_bar_title").Text(screenName));
-            //app.Repl();
-            //app.WaitForElement(c => c.Marked(buttonName));
+            app.WaitForElement(c => c.Class("TextView").Text(screenName));
+
         }
     }
 }

@@ -18,6 +18,9 @@
 	Scenario: Show PDF
 		Given I can see "Show PDF" button
 		When  I tap "Show PDF" buttoon
+		Then Popup appears "Do you want to open in external viewer?"
+
+		When I tap "Cancel" buttoon
 		Then I can see "PDFView" screen
 
 	#Scenario: Launch Repl app
