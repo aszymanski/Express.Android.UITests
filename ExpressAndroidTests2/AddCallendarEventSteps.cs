@@ -53,6 +53,8 @@ namespace ExpressAndroidTests2
         public void ThenICanSeeScreen(string screenName)
         {
             app.WaitForElement(c => c.Class("TextView").Text(screenName));
+            app.ScrollDown();
+            app.ScrollDown();
 
         }
     }
