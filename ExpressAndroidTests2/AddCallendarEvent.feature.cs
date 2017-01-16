@@ -73,7 +73,7 @@ namespace ExpressAndroidTests2
 #line 4
   testRunner.Given("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
-  testRunner.When("I tap \"Add calendar event\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("I tap \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
   testRunner.Then("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -90,9 +90,29 @@ namespace ExpressAndroidTests2
 #line 9
   testRunner.Given("I can see \"Go online forms 1\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
-  testRunner.When("I tap \"Go online forms 1\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("I tap \"Go online forms 1\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
   testRunner.Then("I can see \"Online Form\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+  testRunner.When("I fill the Online Form 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+  testRunner.And("I tap \"Submit\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+  testRunner.Then("I can see \"Results\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+  testRunner.When("I tap \"Sign it!\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+  testRunner.Then("I can see \"Signature\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+  testRunner.When("I perform a signature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+  testRunner.And("I tap \"Results\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+  testRunner.Then("I can see \"Results\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+  testRunner.When("I scroll down to Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+  testRunner.And("I tap \"Sign it!\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -102,13 +122,13 @@ namespace ExpressAndroidTests2
         public virtual void TapGoOnlineForms2()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tap Go Online Forms 2", ((string[])(null)));
-#line 13
+#line 26
  this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 27
   testRunner.Given("I can see \"Go online forms 2\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
-  testRunner.When("I tap \"Go online forms 2\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 28
+  testRunner.When("I tap \"Go online forms 2\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
   testRunner.Then("I can see \"Online Form\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -119,17 +139,17 @@ namespace ExpressAndroidTests2
         public virtual void ShowPDF()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show PDF", ((string[])(null)));
-#line 18
+#line 31
  this.ScenarioSetup(scenarioInfo);
-#line 19
+#line 32
   testRunner.Given("I can see \"Show PDF\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 20
-  testRunner.When("I tap \"Show PDF\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 33
+  testRunner.When("I tap \"Show PDF\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
   testRunner.Then("Popup appears \"Do you want to open in external viewer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 23
-  testRunner.When("I tap \"Cancel\" buttoon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 36
+  testRunner.When("I tap \"Cancel\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
   testRunner.Then("I can see \"PDFView\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
