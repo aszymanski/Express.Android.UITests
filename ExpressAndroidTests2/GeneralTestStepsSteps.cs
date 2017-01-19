@@ -4,11 +4,12 @@ using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Xamarin.UITest.Android;
 using System.Linq;
+using ExpressAndroidTests2.Pages;
 
 namespace ExpressAndroidTests2
 {
     [Binding]
-    public class AddCallendarEventSteps
+    public class GeneralTestStepsSteps
     {
 
         AndroidApp app;
@@ -16,7 +17,9 @@ namespace ExpressAndroidTests2
         [BeforeScenario]
         public void SetUp()
         {
-            app = ConfigureApp.Android.ApkFile("D:/express.droid(2).apk").StartApp();
+            app = ConfigureApp.Android.ApkFile("D:/express.droid.apk").StartApp();
+            app.Device.SetLocation(40.71448, -74.00598);
+
         }
 
         [Given(@"Launch Repl")]
@@ -99,8 +102,18 @@ namespace ExpressAndroidTests2
         [Then(@"I can see ""(.*)"" screen")]
         public void ThenICanSeeScreen(string screenName)
         {
-            app.WaitForElement(c => c.Id("action_bar_title").Text(screenName));         
+            app.WaitForElement(c => c.Id("action_bar_title").Text(screenName));
 
+        }
+
+        [Given(@"Sample ""(.*)"" press")]
+        public void ThSamplePageObject(String buttonName)
+        {
+            Dashboard dashboard = new Dashboard(app);
+            dashboard.CheckIfButtonIsDisplayed(buttonName);
+            dashboard.PressButton(buttonName);
+            dashboard.Test();
+            dashboard.Test();
         }
     }
 }

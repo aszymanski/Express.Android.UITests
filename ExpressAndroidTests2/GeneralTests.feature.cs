@@ -24,7 +24,7 @@ namespace ExpressAndroidTests2
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AddCallendarEvent.feature"
+#line 1 "GeneralTests.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
@@ -71,11 +71,11 @@ namespace ExpressAndroidTests2
 #line 3
  this.ScenarioSetup(scenarioInfo);
 #line 4
-  testRunner.Given("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I can see \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
-  testRunner.When("I tap \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("I tap \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
-  testRunner.Then("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("I can see \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -122,13 +122,13 @@ namespace ExpressAndroidTests2
         public virtual void TapGoOnlineForms2()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tap Go Online Forms 2", ((string[])(null)));
-#line 26
+#line 23
  this.ScenarioSetup(scenarioInfo);
-#line 27
+#line 24
   testRunner.Given("I can see \"Go online forms 2\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
+#line 25
   testRunner.When("I tap \"Go online forms 2\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 26
   testRunner.Then("I can see \"Online Form\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,18 +139,44 @@ namespace ExpressAndroidTests2
         public virtual void ShowPDF()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show PDF", ((string[])(null)));
-#line 31
+#line 28
  this.ScenarioSetup(scenarioInfo);
-#line 32
+#line 29
   testRunner.Given("I can see \"Show PDF\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 33
+#line 30
   testRunner.When("I tap \"Show PDF\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 31
   testRunner.Then("Popup appears \"Do you want to open in external viewer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 36
+#line 33
   testRunner.When("I tap \"Cancel\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 34
   testRunner.Then("I can see \"PDFView\" screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Launch Repl app")]
+        public virtual void LaunchReplApp()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Repl app", ((string[])(null)));
+#line 36
+ this.ScenarioSetup(scenarioInfo);
+#line 37
+  testRunner.Given("Launch Repl", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Sample Page Object test")]
+        public virtual void SamplePageObjectTest()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sample Page Object test", ((string[])(null)));
+#line 39
+ this.ScenarioSetup(scenarioInfo);
+#line 40
+  testRunner.Given("Sample \"Go online forms 1\" press", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
         }

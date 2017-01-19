@@ -59,17 +59,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCallendarEvent.feature.cs">
+    <Compile Include="GeneralTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AddCallendarEvent.feature</DependentUpon>
+      <DependentUpon>GeneralTests.feature</DependentUpon>
     </Compile>
-    <Compile Include="AddCallendarEventSteps.cs" />
+    <Compile Include="GeneralTestStepsSteps.cs" />
+    <Compile Include="Pages\AbstractPage.cs" />
+    <Compile Include="Pages\Dashboard.cs" />
+    <Compile Include="Pages\Form1.cs" />
+    <Compile Include="Pages\Form2.cs" />
+    <Compile Include="Pages\ShowPDF.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AddCallendarEvent.feature">
+    <None Include="GeneralTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>AddCallendarEvent.feature.cs</LastGenOutput>
+      <LastGenOutput>GeneralTests.feature.cs</LastGenOutput>
     </None>
     <None Include="app.config">
       <SubType>Designer</SubType>
