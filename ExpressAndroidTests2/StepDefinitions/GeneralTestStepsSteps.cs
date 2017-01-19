@@ -5,6 +5,7 @@ using Xamarin.UITest.Queries;
 using Xamarin.UITest.Android;
 using System.Linq;
 using ExpressAndroidTests2.Pages;
+using NUnit.Framework;
 
 namespace ExpressAndroidTests2
 {
@@ -31,7 +32,8 @@ namespace ExpressAndroidTests2
         [Given(@"I can see ""(.*)"" button")]
         public void GivenICanSeeButton(string buttonName)
         {
-            app.WaitForElement(c => c.Marked(buttonName));
+            AbstractPage page = new AbstractPage(app);
+            Assert.IsTrue(page.CheckIfButtonIsDisplayed(buttonName));      
         }    
 
         [When(@"I fill the Online Form 1")]
@@ -112,8 +114,8 @@ namespace ExpressAndroidTests2
             Dashboard dashboard = new Dashboard(app);
             dashboard.CheckIfButtonIsDisplayed(buttonName);
             dashboard.PressButton(buttonName);
-            dashboard.Test();
-            dashboard.Test();
+            Form1 form1 = new Form1(app);
+            app.WaitForElement(form1.QuestionHeader("What filing status will you use on your 2016 Income Tax Return?"));
         }
     }
 }

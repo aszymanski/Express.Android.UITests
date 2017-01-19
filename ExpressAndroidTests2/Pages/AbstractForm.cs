@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
-
 namespace ExpressAndroidTests2.Pages
 {
-    public class Form1 : AbstractForm
+    public class AbstractForm : AbstractPage
     {
+        public Query QuestionHeader(string questionHeader)
+        {
+            return c => c.Class("TextView").Text(questionHeader);
+        }
 
-        public Form1(IApp app)
+        readonly protected IApp app;
+        public AbstractForm(IApp app)
             : base(app)
         {
         }

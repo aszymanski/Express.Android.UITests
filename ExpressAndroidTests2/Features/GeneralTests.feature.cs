@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ExpressAndroidTests2
+namespace ExpressAndroidTests2.Features
 {
     using TechTalk.SpecFlow;
     

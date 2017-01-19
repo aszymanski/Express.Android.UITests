@@ -59,12 +59,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralTests.feature.cs">
+    <Compile Include="Features\FillForm1Flow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FillForm1Flow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\GeneralTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneralTests.feature</DependentUpon>
     </Compile>
-    <Compile Include="GeneralTestStepsSteps.cs" />
+    <Compile Include="Pages\AbstractForm.cs" />
+    <Compile Include="StepDefinitions\GeneralTestStepsSteps.cs" />
     <Compile Include="Pages\AbstractPage.cs" />
     <Compile Include="Pages\Dashboard.cs" />
     <Compile Include="Pages\Form1.cs" />
@@ -72,7 +78,11 @@
     <Compile Include="Pages\ShowPDF.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GeneralTests.feature">
+    <None Include="Features\FillForm1Flow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FillForm1Flow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GeneralTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GeneralTests.feature.cs</LastGenOutput>
     </None>
