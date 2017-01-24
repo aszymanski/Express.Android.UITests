@@ -1,8 +1,8 @@
-﻿Feature: General Smoke Test
+﻿Feature: General application flow
 	Scenario: Tap Add Callendar
-		Given I can see "Add calendar event" button
-		When  I tap "Add calendar event" button
-		Then I can see "Add calendar event" button
+		Given I can see "US Test Add Calendar Event" button
+		When  I tap "US Test Add Calendar Event" button
+		Then I can see "US Test Add Calendar Event" button
 
 	Scenario: Tap Go Online Forms 1
 		Given I can see "Go online forms 1" button
@@ -32,8 +32,8 @@
 		When I tap "Cancel" button
 		Then I can see "PDFView" screen
 
-	#Scenario: Launch Repl app
-	#	Given Launch Repl
+	Scenario: Launch Repl app
+		Given Launch Repl
 
 	Scenario: Sample Page Object test
 		Given Sample "Go online forms 1" press

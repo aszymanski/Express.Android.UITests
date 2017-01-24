@@ -4,21 +4,22 @@ using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Xamarin.UITest.Android;
 using System.Linq;
-using ExpressAndroidTests2.Pages;
+using Expres.Droid.UITests.Pages;
 using NUnit.Framework;
 
-namespace ExpressAndroidTests2
+namespace Expres.Droid.UITests
 {
     [Binding]
     public class GeneralTestStepsSteps
     {
 
         AndroidApp app;
-        
+
         [BeforeScenario]
         public void SetUp()
         {
-            app = ConfigureApp.Android.EnableLocalScreenshots().ApkFile("D:/express.droid.apk").StartApp();
+            app = ConfigureApp.Android.EnableLocalScreenshots().StartApp();
+            //app = ConfigureApp.Android.EnableLocalScreenshots().ApkFile("D:/express.droid.apk").StartApp();
             //app.Device.SetLocation(40.71448, -74.00598);
 
         }
@@ -106,8 +107,8 @@ namespace ExpressAndroidTests2
         [Then(@"I can see ""(.*)"" screen")]
         public void ThenICanSeeScreen(string screenName)
         {
-            app.WaitForElement(c => c.Id("action_bar_title").Text(screenName));
-
+            //app.WaitForElement(c => c.Id("action_bar").Text(screenName));
+            app.WaitForElement(c => c.Id("action_bar").Child("TextView").Text(screenName));
         }
 
         [Given(@"Sample ""(.*)"" press")]
@@ -118,7 +119,7 @@ namespace ExpressAndroidTests2
             dashboard.CheckIfButtonIsDisplayed(buttonName);
             dashboard.PressButton(buttonName);
             Form1 form1 = new Form1(app);
-            app.WaitForElement(form1.QuestionHeader("What filing status will you use on your 2016 Income Tax Return?"));
+          //  app.WaitForElement(form1.QuestionHeader("What filing status will you use on your 2016 Income Tax Return?"));
             app.Screenshot("Button check - " + buttonName);
         }
     }

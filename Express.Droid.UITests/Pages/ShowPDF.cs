@@ -7,11 +7,11 @@ using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 
-namespace ExpressAndroidTests2.Pages
+namespace Expres.Droid.UITests.Pages
 {
-    class Form2 : AbstractPage
+    class ShowPDF : AbstractPage
     {
-        public Form2(IApp app)
+        public ShowPDF(IApp app)
             : base(app)
         {
         }

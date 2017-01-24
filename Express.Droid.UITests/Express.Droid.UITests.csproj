@@ -28,21 +28,29 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\..\EXPR0002-ExpressMobileAppImplementation\src\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\..\EXPR0002-ExpressMobileAppImplementation\src\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SpecRun.SpecFlowPlugin, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecRun.SpecFlow.1.5.2\lib\net45\SpecRun.SpecFlowPlugin.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\..\EXPR0002-ExpressMobileAppImplementation\src\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\EXPR0002-ExpressMobileAppImplementation\src\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="TechTalk.SpecRun, Version=1.5.2.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecRun.SpecFlow.1.5.2\lib\net45\TechTalk.SpecRun.dll</HintPath>
+      <HintPath>..\..\..\EXPR0002-ExpressMobileAppImplementation\src\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.UITest, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -51,15 +59,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\FillForm1Flow.feature.cs">
+    <Compile Include="Features\General Tests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FillForm1Flow.feature</DependentUpon>
+      <DependentUpon>General Tests.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\GeneralTests.feature.cs">
+    <Compile Include="Features\Fill form no.1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GeneralTests.feature</DependentUpon>
+      <DependentUpon>Fill form no.1.feature</DependentUpon>
     </Compile>
     <Compile Include="Pages\AbstractForm.cs" />
     <Compile Include="StepDefinitions\GeneralTestStepsSteps.cs" />
@@ -68,31 +76,36 @@
     <Compile Include="Pages\Form1.cs" />
     <Compile Include="Pages\Form2.cs" />
     <Compile Include="Pages\ShowPDF.cs" />
+    <Compile Include="SpaceForTestRecorder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\FillForm1Flow.feature">
+    <None Include="Features\General Tests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FillForm1Flow.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\GeneralTests.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>GeneralTests.feature.cs</LastGenOutput>
+      <LastGenOutput>General Tests.feature.cs</LastGenOutput>
     </None>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
-    <None Include="runtests.cmd" />
-    <None Include="SpecRunTestProfile.xsd">
+    <None Include="Features\Fill form no.1.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Fill form no.1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\EXPR0002-ExpressMobileAppImplementation\src\Express.Droid\Express.Droid.csproj">
+      <Project>{1fe7b683-7998-4479-a98c-c3e18527f533}</Project>
+      <Name>Express.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,20 +7,13 @@ using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 
-namespace ExpressAndroidTests2.Pages
+namespace Expres.Droid.UITests.Pages
 {
-    public class Dashboard : AbstractPage
+    class Form2 : AbstractPage
     {
-
-        public Dashboard(IApp app)
+        public Form2(IApp app)
             : base(app)
         {
         }
-
-        public void Test()
-        {
-            app.Back();
-        }
     }
-    
 }

@@ -7,7 +7,7 @@ using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 
-namespace ExpressAndroidTests2.Pages
+namespace Expres.Droid.UITests.Pages
 {
     public class Form1 : AbstractForm
     {

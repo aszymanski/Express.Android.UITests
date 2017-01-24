@@ -17,35 +17,37 @@ namespace Express.Android.UITests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("General Smoke Test", SourceFile="Features\\GeneralTests.feature", SourceLine=0)]
-    public partial class GeneralSmokeTestFeature
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("General application flow")]
+    public partial class GeneralApplicationFlowFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "GeneralTests.feature"
+#line 1 "General Tests.feature"
 #line hidden
         
-        [TechTalk.SpecRun.FeatureInitialize()]
+        [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "General Smoke Test", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "General application flow", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [TechTalk.SpecRun.FeatureCleanup()]
+        [NUnit.Framework.TestFixtureTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [TechTalk.SpecRun.ScenarioCleanup()]
+        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -61,23 +63,25 @@ namespace Express.Android.UITests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Tap Add Callendar", SourceLine=1)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Tap Add Callendar")]
         public virtual void TapAddCallendar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tap Add Callendar", ((string[])(null)));
 #line 2
  this.ScenarioSetup(scenarioInfo);
 #line 3
-  testRunner.Given("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I can see \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 4
-  testRunner.When("I tap \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("I tap \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 5
-  testRunner.Then("I can see \"Add calendar event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("I can see \"US Test Add Calendar Event\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Tap Go Online Forms 1", SourceLine=6)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Tap Go Online Forms 1")]
         public virtual void TapGoOnlineForms1()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tap Go Online Forms 1", ((string[])(null)));
@@ -109,7 +113,8 @@ namespace Express.Android.UITests.Features
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Tap Go Online Forms 2", SourceLine=21)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Tap Go Online Forms 2")]
         public virtual void TapGoOnlineForms2()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tap Go Online Forms 2", ((string[])(null)));
@@ -125,7 +130,8 @@ namespace Express.Android.UITests.Features
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Show PDF", SourceLine=26)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Show PDF")]
         public virtual void ShowPDF()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show PDF", ((string[])(null)));
@@ -145,7 +151,21 @@ namespace Express.Android.UITests.Features
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sample Page Object test", SourceLine=37)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Launch Repl app")]
+        public virtual void LaunchReplApp()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Repl app", ((string[])(null)));
+#line 35
+ this.ScenarioSetup(scenarioInfo);
+#line 36
+  testRunner.Given("Launch Repl", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Sample Page Object test")]
         public virtual void SamplePageObjectTest()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sample Page Object test", ((string[])(null)));
@@ -155,12 +175,6 @@ namespace Express.Android.UITests.Features
   testRunner.Given("Sample \"Go online forms 1\" press", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.TestRunCleanup()]
-        public virtual void TestRunCleanup()
-        {
-            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
     }
 }
