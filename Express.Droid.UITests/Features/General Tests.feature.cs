@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Express.Android.UITests.Features
+namespace Express.Droid.UITests.Features
 {
     using TechTalk.SpecFlow;
     

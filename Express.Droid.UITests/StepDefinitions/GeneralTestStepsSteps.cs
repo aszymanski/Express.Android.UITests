@@ -7,7 +7,7 @@ using System.Linq;
 using Expres.Droid.UITests.Pages;
 using NUnit.Framework;
 
-namespace Expres.Droid.UITests
+namespace Express.Droid.UITests
 {
     [Binding]
     public class GeneralTestStepsSteps
@@ -18,8 +18,8 @@ namespace Expres.Droid.UITests
         [BeforeScenario]
         public void SetUp()
         {
-            app = ConfigureApp.Android.EnableLocalScreenshots().StartApp();
-            //app = ConfigureApp.Android.EnableLocalScreenshots().ApkFile("D:/express.droid.apk").StartApp();
+            //app = ConfigureApp.Android.EnableLocalScreenshots().StartApp();
+            app = ConfigureApp.Android.EnableLocalScreenshots().ApkFile("D:/express.droid.apk").StartApp();
             //app.Device.SetLocation(40.71448, -74.00598);
 
         }
